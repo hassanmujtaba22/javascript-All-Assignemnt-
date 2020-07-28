@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter 21 to 30</title>
+</head>
+<body>
+    <script>
+
+        var userInput = prompt("Enter Your text: ", "hassan mujtaba")
+        var splitInput=userInput.split(" ");
+        var spaceEnd="";
+        var space=" ";
+        for (var i=0; i<splitInput.length; i++){
+        var result = spaceEnd+= splitInput[i].charAt(0).toUpperCase() + splitInput[i].slice(1).toLowerCase() + space;
+        alert(result)
+        }
+    </script>
+</body>
+</html>

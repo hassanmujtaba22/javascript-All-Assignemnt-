@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+    
+        var name =  prompt("Enter Your Name: ", "Hassan");
+        var month = prompt("Enter Your Month of Birth:", "06");
+        var date = prompt("Enter Your Date of Birth", "22");
+        var year = prompt("Enter Your Year of Birth:", "2000");
+    
+        var greeting;
+        var time = new Date().getHours();
+        if (time < 10) {
+            greeting = "Good Morning";
+        } 
+        else if (time < 15) {
+            greeting = "AfterNoon";
+        } 
+        else if (time < 19) {
+            greeting = "Good Evening";
+        }
+        else{
+          greeting = "Good Night"
+      }
+    console.log("Hello " + name + " " + greeting)
+    
+    var currentDate =  new Date()
+    var d =  new Date(month + " " + date + ", " + year)
+    console.log("Your DOB is " + d)
+    
+    var msDiff = currentDate.getTime() - d.getTime();
+    var sec = msDiff / 1000;
+    var mins = msDiff / (1000 * 60);
+    var hours = msDiff / (1000 * 60 * 60)
+    var days = msDiff / (1000 * 60 * 60 * 24)
+    var years = msDiff / (1000 * 60 * 60 * 24 * 365)
+    var months = ((msDiff / (1000 * 60 * 60 * 24) / 365) * 12)
+    console.log("You're " + Math.floor(years) + " Years " + Math.floor(months) + " Months " + Math.floor(days) + " Days " + Math.floor(hours) + " Hours " + Math.floor(mins) + " Minutes " + Math.floor(sec) + " Seconds old.")
+    
+    var dateOfBirth = new Date(22/06/2000).getTime()
+    var todayDate = new Date().getTime()
+    var totalDays = todayDate + dateOfBirth;
+    var Difference_In_Days = totalDays / (1000 * 3600 * 24)
+    Difference_In_Days = Math.floor(Difference_In_Days)
+    console.log("Your Age in Day is " + Difference_In_Days)
+    
+    </script>    
+</body>
+</html>
